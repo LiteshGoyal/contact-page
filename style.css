@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400&display=swap');
+
+html{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 1280px;
+    height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+}
+body{
+    min-height: 100vh;
+    max-width: 1280px;
+    /* background: #020617; */background-image: linear-gradient(to bottom right, rgb(218, 119, 136), rgb(68, 13, 102));
+    background-position: 0 0,25px 25px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+} 
+header img{
+    margin-left: 5rem;
+}
+.head{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+.mainheading{
+    font-size: 4rem;
+    color: white;
+}
+.para{
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.namebox{
+    grid-area: name;
+}
+.companyemailbox{
+    grid-area: mail;
+}
+.companysizebox{
+    grid-area:size;
+}
+.subjectbox{
+    grid-area: subject;
+}
+.messagebox{
+    grid-area: message;
+}
+.formbox{
+    background-color: #cdd5e067;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 7rem;
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+    'name mail'
+    'size subject'
+    'message message'
+    'message message'
+    'message message';
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.formcontent{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.formcontent input,textarea{
+    border-radius: 1rem;
+    padding: 1rem;
+    outline: none;
+    border: none;
+}
+
+#size,#subject{
+    background-image: url('dccl--responsive-contact-page/Expand_down.svg');
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
+}
+.submitt{
+    width: 205%;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+@media screen and (min-width:641px) and  (max-width:1024px) {
+    .formbox{
+        width: 90%;
+    }
+    .submitt{
+        width: 203%;
+    }
+}
+@media screen and (max-width:640px) 
+{
+    .formbox{
+        width: 90%;
+        grid-template-areas: 
+        'name name'
+        'mail mail'
+        'size size'
+        'subject subject'
+        'message message';
+    }
+    .submitt{
+        width: 189%;
+    }
+}
